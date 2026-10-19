@@ -55,7 +55,8 @@ def test_landing_page(client):
     """Test if landing page loads."""
     response = client.get('/')
     assert response.status_code == 200
-    assert b"Smart Crowd Manager" in response.data
+    # assert b"Smart Crowd Manager" in response.data
+    assert b"EventO" in response.data
 
 def test_admin_dashboard_access(client):
     """Test that only admin can access admin dashboard."""
